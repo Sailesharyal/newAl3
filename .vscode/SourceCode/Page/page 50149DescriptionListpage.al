@@ -54,15 +54,33 @@ page 50149 "DescriptionListpage"
                 trigger OnAction()
                 var
                     i: Integer;
+                    multiply: Integer;
                 begin
-                    i := 0;
+                    i := 1;
                     repeat
+                        multiply := i * Rec.Age;
+                        Message('Multiplication of %1 by %2 is %3', Rec.Age, i, multiply);
                         i := i + 1;
-                        Message('this is your name %1', Rec.NameofPerson);
                     until i = 10;
                 end;
 
+            }
 
+            action(PrimeNumber)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    i: Integer;
+                    multiply: Integer;
+                begin
+                    i := 1;
+                    repeat
+                        Message('This is prime number %1', i);
+                        i := i + 2;
+                    until i = 101;
+                end;
 
             }
         }
