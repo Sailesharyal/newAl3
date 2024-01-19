@@ -23,6 +23,10 @@ page 50109 Calc_Page
                 {
                     ApplicationArea = All;
                 }
+                field(Multiply; Rec.Multiply)
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }
@@ -78,6 +82,22 @@ page 50109 Calc_Page
                     MyCod: Codeunit MyCodeunit;
                 begin
                     MyCod.CallByRef(Rec.Value_1, rec.Value_2, rec.Result);
+                end;
+            }
+
+            action(ToMultiply)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    Multi: Codeunit MyCodeunit;
+                begin
+                    Rec.Multiply := Multi.sumbyvalue1(Rec.Value_1, Rec.Value_2);
+                    Rec.Modify();
+
+
+
                 end;
             }
         }

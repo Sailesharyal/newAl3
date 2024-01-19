@@ -22,6 +22,25 @@ table 50109 Calc
             DataClassification = ToBeClassified;
         }
 
+        field(5; "Multiply"; Integer)
+        {
+            Caption = 'Multiply';
+            DataClassification = ToBeClassified;
+        }
+
+        field(6; "Sum"; Integer)
+        {
+            Caption = 'Addition';
+            DataClassification = ToBeClassified;
+        }
+        field(7; "Division"; Decimal)
+        {
+            Caption = 'Division';
+            DataClassification = ToBeClassified;
+        }
+
+
+
     }
 
     keys

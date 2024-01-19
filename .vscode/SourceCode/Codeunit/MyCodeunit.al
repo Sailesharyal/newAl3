@@ -28,6 +28,13 @@ codeunit 50100 MyCodeunit
         c := a + b;
     end;
 
+    procedure sumbyvalue1(a: Integer; b: Integer): Decimal
+
+    begin
+        exit(a * b);
+    End;
+
+
     // var
     //     a, b, c : Integer;
 }
