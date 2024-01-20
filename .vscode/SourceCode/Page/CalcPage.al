@@ -95,11 +95,24 @@ page 50109 Calc_Page
                 begin
                     Rec.Multiply := Multi.sumbyvalue1(Rec.Value_1, Rec.Value_2);
                     Rec.Modify();
-
-
-
                 end;
             }
+
+            action(ToMultiply2)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    Multi: Codeunit MyCodeunit;
+                begin
+                    Rec.Multiply := Multi.sumbyvalue1(Rec.Value_1, Rec.Value_2);
+                    Rec.Modify();
+                end;
+            }
+
+
+
         }
     }
 }
