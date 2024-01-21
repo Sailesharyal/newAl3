@@ -28,6 +28,11 @@ page 50109 Calc_Page
                     ApplicationArea = All;
                 }
 
+                field(Division; Rec.Division)
+                {
+                    ApplicationArea = All;
+                }
+
             }
         }
     }
@@ -108,6 +113,18 @@ page 50109 Calc_Page
                 begin
                     Rec.Multiply := Multi.sumbyvalue1(Rec.Value_1, Rec.Value_2);
                     Rec.Modify();
+                end;
+            }
+
+            action(ToDivide)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    Div1: Codeunit MyCodeunit;
+                begin
+                    Div1.NoReturnType1();
                 end;
             }
 

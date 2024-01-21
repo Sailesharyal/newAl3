@@ -34,6 +34,16 @@ codeunit 50100 MyCodeunit
         exit(a * b);
     End;
 
+    procedure NoRetuenType1()
+    var
+        Division1: Record Calc;
+    begin
+        Division1.Get();
+        Division1.Result := Division1.Value_1 + Division1.Value_2;
+        Division1.Modify();
+
+    end;
+
 
     // var
     //     a, b, c : Integer;
