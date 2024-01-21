@@ -34,15 +34,23 @@ codeunit 50100 MyCodeunit
         exit(a * b);
     End;
 
-    procedure NoRetuenType1()
+    procedure NoReturnType1()
     var
         Division1: Record Calc;
     begin
         Division1.Get();
-        Division1.Result := Division1.Value_1 + Division1.Value_2;
+        Division1.Multiply := Division1.Value_1 * Division1.Value_2;
         Division1.Modify();
 
     end;
+
+    procedure Callbyref2(x: Integer; y: Integer; var z: Integer)
+    begin
+        z := x + y;
+    end;
+
+
+
 
 
     // var

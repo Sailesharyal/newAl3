@@ -116,7 +116,7 @@ page 50109 Calc_Page
                 end;
             }
 
-            action(ToDivide)
+            action(Div1)
             {
                 ApplicationArea = All;
 
@@ -125,8 +125,12 @@ page 50109 Calc_Page
                     Div1: Codeunit MyCodeunit;
                 begin
                     Div1.NoReturnType1();
+
+
                 end;
             }
+
+
 
 
 

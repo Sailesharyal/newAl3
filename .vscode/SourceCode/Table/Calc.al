@@ -9,7 +9,7 @@ table 50109 Calc
             Caption = 'MyField';
             DataClassification = ToBeClassified;
         }
-        field(2; Value_1; Integer)
+        field(2; Value_1; Decimal)
         {
             DataClassification = ToBeClassified;
         }
