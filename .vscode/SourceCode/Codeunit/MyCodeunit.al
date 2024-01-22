@@ -39,12 +39,12 @@ codeunit 50100 MyCodeunit
         Division1: Record Calc;
     begin
         Division1.Get();
-        Division1.Multiply := Division1.Value_1 * Division1.Value_2;
+        Division1.Division := Division1.Value_1 / Division1.Value_2;
         Division1.Modify();
 
     end;
 
-    procedure Callbyref2(x: Integer; y: Integer; var z: Integer)
+    procedure Callbyref2(x: Integer; y: Integer; var z: Decimal)
     begin
         z := x + y;
     end;
