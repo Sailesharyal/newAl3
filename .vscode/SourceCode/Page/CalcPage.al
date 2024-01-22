@@ -141,6 +141,19 @@ page 50109 Calc_Page
                     Cod1.Callbyref2(Rec.Value_1, Rec.Value_2, Rec.Division);
 
                 end;
+
+            }
+
+            action(Divref5)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    Div5: Codeunit MyCodeunit;
+                begin
+                    Div5.Callbyref2(Rec.Value_1, Rec.Value_2, Rec.Division);
+                end;
             }
 
 
