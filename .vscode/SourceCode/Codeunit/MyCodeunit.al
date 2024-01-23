@@ -1,5 +1,6 @@
 codeunit 50100 MyCodeunit
 {
+    //Used a OnRun Trigger And called in page
     trigger OnRun()
     var
         calc: Record Calc;
@@ -9,10 +10,13 @@ codeunit 50100 MyCodeunit
         calc.Modify();
     end;
 
+    // Made a procuders and called in page as sa sum by value
     procedure SumByValue(a: Integer; b: Integer): Integer
     begin
         exit(a + b);
     end;
+
+    // Made a procuders with no return type 
 
     procedure NoReturnType()
     var
@@ -22,7 +26,7 @@ codeunit 50100 MyCodeunit
         calc.Result := calc.Value_1 + calc.Value_2;
         calc.Modify();
     end;
-
+    // Made a procuders and called with ref
     procedure CallByRef(a: Integer; b: Integer; var c: Integer)
     begin
         c := a + b;
@@ -48,6 +52,8 @@ codeunit 50100 MyCodeunit
     begin
         z := x + y;
     end;
+
+
 
 
 
