@@ -17,10 +17,19 @@ table 50147 Buyers
             DataClassification = ToBeClassified;
         }
 
+
+        field(3; "issaleshmanagment"; code[20])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = "No. Series";
+        }
+
+
+
     }
 
-}
-    
+
+
     keys
     {
         key(Key1; "Buyers_Id")
@@ -28,5 +37,9 @@ table 50147 Buyers
             Clustered = true;
         }
     }
-    
+
+
+    var
+        IsCodeunit: Codeunit NoSeriesManagement;
+        Issaleshmanagement: Record "Sales & Receivables Setup";
 }
