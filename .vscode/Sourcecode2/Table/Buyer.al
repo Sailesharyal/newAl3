@@ -18,14 +18,18 @@ table 50144 Buyers
         }
 
 
-        field(3; "issaleshmanagment"; code[20])
+        field(3; "Buyers ko ID"; code[20])
         {
             DataClassification = CustomerContent;
+            TableRelation = "No. Series";
         }
 
 
 
     }
+
+
+
 
 
 
@@ -36,6 +40,17 @@ table 50144 Buyers
             Clustered = true;
         }
     }
+    var
+        isCodeUnit2: Codeunit NoSeriesManagement;
+        isSales: Record "Sales & Receivables Setup";
 
+
+    trigger OnInsert()
+    begin
+        if Rec.Buyers_Id = '' then
+            isSales.Get();
+        isCodeUnit2.InitSeries(isSales."Buyer number", isSales."Buyer number", 0D, Buyers_Id, "Buyers ko ID");
+    end;
 
 }
+
