@@ -1,4 +1,4 @@
-page 50144 "BuyerslistPage"
+page 50142 "Buyers Card Page"
 {
     Caption = 'Caption';
     PageType = Card;
@@ -10,7 +10,7 @@ page 50144 "BuyerslistPage"
     {
         area(Content)
         {
-            group(Buyers)
+            group("Buyers Detail")
             {
                 field(Buyers_Id; Rec.Buyers_Id)
                 {
@@ -19,8 +19,10 @@ page 50144 "BuyerslistPage"
 
                 field("Bought Product"; Rec."Bought Product")
                 {
-                    ApplicationArea = All;
+
+                    Applicationarea = All;
                 }
+
 
             }
         }

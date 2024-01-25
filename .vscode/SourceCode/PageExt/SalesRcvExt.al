@@ -8,6 +8,17 @@ pageextension 50101 MyExtension extends "Sales & Receivables Setup"
             {
                 ApplicationArea = All;
             }
+
         }
+        addafter("Quote Nos.")
+        {
+            field("Buyer number"; Rec."Buyer number")
+            {
+                ApplicationArea = All;
+            }
+        }
+
+
+
     }
 }

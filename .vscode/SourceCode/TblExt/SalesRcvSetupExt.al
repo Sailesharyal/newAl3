@@ -8,6 +8,14 @@ tableextension 50100 SalesExt extends "Sales & Receivables Setup"
             DataClassification = ToBeClassified;
         }
 
+        field(50101; "Buyer number"; Code[20])
+        {
+            TableRelation = "No. Series";
+            DataClassification = ToBeClassified;
+        }
+
+
+
     }
 
 }
