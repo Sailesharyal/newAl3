@@ -1,4 +1,4 @@
-table 50140 "Lerning Flow Field"
+table 50139 "Lerning Flow Field"
 {
     DataClassification = ToBeClassified;
 
@@ -15,11 +15,16 @@ table 50140 "Lerning Flow Field"
             DataClassification = ToBeClassified;
         }
 
+        field(3; "No."; Integer)
+        {
+            DataClassification = ToBeClassified;
+        }
+
     }
 
     keys
     {
-        key(Key1; county)
+        key(key1; "No.")
         {
             Clustered = true;
         }
