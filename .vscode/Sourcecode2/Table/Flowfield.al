@@ -20,6 +20,8 @@ table 50139 "Lerning Flow Field"
             DataClassification = ToBeClassified;
         }
 
+
+
     }
 
     keys

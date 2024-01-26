@@ -1,33 +1,34 @@
-page 50139 "Flowfield page"
+page 50153 "loanlinelist"
 {
-    Caption = 'learningflow fields';
-    PageType = Card;
+    Caption = 'Caption';
+    PageType = List;
     ApplicationArea = All;
-    UsageCategory = Administration;
-    SourceTable = "Lerning Flow Field";
+    UsageCategory = Lists;
+    SourceTable = loanline;
 
     layout
     {
         area(Content)
         {
-            group(LEARNING)
+            repeater(Line)
             {
-                field(county; Rec.county)
+                field(loan_Id; Rec.loan_Id)
+                {
+                    ApplicationArea = All;
+                }
+                field("Line.No"; Rec."Line.No")
+                {
+                    ApplicationArea = All;
+                }
+                field(Date; Rec.Date)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Checkname; Rec.Checkname)
+                field("Paid Amout"; Rec."Paid Amout")
                 {
                     ApplicationArea = All;
                 }
-
-                field("No."; Rec."No.")
-                {
-                    ApplicationArea = ALL;
-
-                }
-
 
             }
         }
