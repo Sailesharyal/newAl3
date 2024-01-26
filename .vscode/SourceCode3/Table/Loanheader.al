@@ -23,12 +23,22 @@ table 50151 "Loan Header"
         {
             Caption = 'Customer ID';
             DataClassification = ToBeClassified;
+            TableRelation = Customer;
+            Editable = False;
+            trigger OnValidate()
+            var
+                Name: Record Customer;
+            begin
+                if Name.Get("Customer ID") then
+                    Rec."Customer Name" := Name.Contact;
+            end;
         }
 
         field(3; "Customer Name"; Text[20])
         {
             Caption = 'Customer Name';
             DataClassification = ToBeClassified;
+
         }
         field(4; "Bank Account Number"; Integer)
         {
@@ -39,7 +49,8 @@ table 50151 "Loan Header"
         field(5; "Bank Name"; Text[20])
         {
             Caption = 'Bank Name';
-            DataClassification = ToBeClassified;
+            TableRelation = "Bank Account";
+
         }
 
         field(6; "Loan Amount"; Integer)
