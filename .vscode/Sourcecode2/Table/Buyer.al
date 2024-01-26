@@ -49,7 +49,7 @@ table 50144 Buyers
     begin
         if Rec.Buyers_Id = '' then
             isSales.Get();
-        isCodeUnit2.InitSeries(isSales."Order Nos.", isSales."Order Nos.", 0D, Buyers_Id, "Buyers ko ID");
+        isCodeUnit2.InitSeries(isSales."Buyer number", isSales."Buyer number", 0D, Buyers_Id, "Buyers ko ID");
     end;
 
 }
