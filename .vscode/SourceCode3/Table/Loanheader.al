@@ -6,10 +6,17 @@ table 50151 "Loan Header"
 
     fields
     {
-        field(1; "Loan Id"; Integer)
+        field(1; "Loan Id"; Code[20])
         {
-            Caption = 'MyField';
+
             DataClassification = ToBeClassified;
+
+        }
+
+        field(10; "Numberseries"; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series";
         }
 
         field(2; "Customer ID"; Code[20])
@@ -41,6 +48,20 @@ table 50151 "Loan Header"
             DataClassification = ToBeClassified;
         }
 
+        field(7; "Loan start Date"; Date)
+        {
+            Caption = 'Loan start Date';
+            DataClassification = ToBeClassified;
+        }
+
+        field(8; "Loan End Date"; Date)
+        {
+            Caption = 'Loan End Date';
+            DataClassification = ToBeClassified;
+        }
+
+
+
 
 
     }
@@ -52,5 +73,20 @@ table 50151 "Loan Header"
             Clustered = true;
         }
     }
+    Var
+
+        isCodeUnit3: Codeunit NoSeriesManagement;
+        isSales3: Record "Sales & Receivables Setup";
+
+
+    trigger OnInsert()
+    begin
+        if Rec."Loan Id" = '' then
+            isSales3.Get();
+        isCodeUnit3.InitSeries(isSales3."Parking No", isSales3."Parking No", 0D, "Loan Id", Numberseries);
+
+
+    end;
+
 
 }

@@ -13,14 +13,16 @@ page 50151 "Loan Header PAGE"
             group("HEader")
             {
 
-                field("Customer ID"; Rec."Customer ID")
-                {
-                    ApplicationArea = All;
-                }
+
                 field("Loan Id"; Rec."Loan Id")
                 {
                     ApplicationArea = All;
                 }
+                field("Customer ID"; Rec."Customer ID")
+                {
+                    ApplicationArea = All;
+                }
+
                 field("Customer Name"; Rec."Customer Name")
                 {
                     ApplicationArea = All;
@@ -43,6 +45,12 @@ page 50151 "Loan Header PAGE"
                 {
                     ApplicationArea = All;
                 }
+
+                field("Loan End Date"; Rec."Loan End Date")
+                {
+                    ApplicationArea = All;
+                }
+
 
 
             }
