@@ -19,12 +19,12 @@ table 50151 "Loan Header"
             TableRelation = "No. Series";
         }
 
-        field(2; "Customer ID"; Code[20])
+        field(2; "Customer ID"; Code[30])
         {
             Caption = 'Customer ID';
             DataClassification = ToBeClassified;
             TableRelation = Customer;
-            Editable = False;
+
             trigger OnValidate()
             var
                 Name: Record Customer;
@@ -34,22 +34,30 @@ table 50151 "Loan Header"
             end;
         }
 
-        field(3; "Customer Name"; Text[20])
+        field(3; "Customer Name"; Text[30])
         {
             Caption = 'Customer Name';
             DataClassification = ToBeClassified;
+            Editable = False;
+
 
         }
-        field(4; "Bank Account Number"; Integer)
+        field(4; "Bank Account Number"; Text[30])
         {
             Caption = 'Bank Account Number';
-            DataClassification = ToBeClassified;
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = lookup("Bank Account"."Bank Account No." where(Name = field("Bank Name")));
+
+
         }
 
-        field(5; "Bank Name"; Text[20])
+        field(5; "Bank Name"; Code[30])
         {
             Caption = 'Bank Name';
             TableRelation = "Bank Account";
+
+
 
         }
 
@@ -57,18 +65,23 @@ table 50151 "Loan Header"
         {
             Caption = 'Loan Amount';
             DataClassification = ToBeClassified;
+
         }
 
         field(7; "Loan start Date"; Date)
         {
             Caption = 'Loan start Date';
             DataClassification = ToBeClassified;
+
+
         }
 
         field(8; "Loan End Date"; Date)
         {
             Caption = 'Loan End Date';
             DataClassification = ToBeClassified;
+            Description = 'This is just a sample example fiel where we add Data and many more ';
+
         }
 
 
