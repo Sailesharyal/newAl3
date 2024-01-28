@@ -72,6 +72,7 @@ table 50151 "Loan Header"
         {
             Caption = 'Loan start Date';
             DataClassification = ToBeClassified;
+            Description = 'This is just a sample example field where we add Date before taking lone';
 
 
         }
