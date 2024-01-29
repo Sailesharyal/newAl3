@@ -47,7 +47,7 @@ table 50151 "Loan Header"
             Caption = 'Bank Account Number';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = lookup("Bank Account"."Bank Account No." where(Name = field("Bank Name")));
+            CalcFormula = lookup("Bank Account"."Bank Branch No." where(Name = field("Bank Name")));
 
 
         }
