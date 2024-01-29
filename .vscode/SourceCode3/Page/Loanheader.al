@@ -54,6 +54,11 @@ page 50151 "Loan Header PAGE"
 
 
             }
+
+            part(loanline; loanlinelist)
+            {
+                SubPageLink = loan_Id = field("Loan Id");
+            }
         }
     }
 

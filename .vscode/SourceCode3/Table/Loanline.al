@@ -37,7 +37,7 @@ table 50153 "loanline"
 
     keys
     {
-        key(PK; "loan_Id")
+        key(PK; "loan_Id", "Line.No")
         {
             Clustered = true;
         }

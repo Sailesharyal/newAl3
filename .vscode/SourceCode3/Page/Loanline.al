@@ -1,7 +1,7 @@
 page 50153 "loanlinelist"
 {
     Caption = 'Caption';
-    PageType = List;
+    PageType = ListPart;
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = loanline;
