@@ -47,6 +47,11 @@ page 50152 "loan Header List page"
                 {
                     ApplicationArea = All;
                 }
+
+                field("Total Paid Amout"; Rec."Total Paid Amout")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
         area(Factboxes)

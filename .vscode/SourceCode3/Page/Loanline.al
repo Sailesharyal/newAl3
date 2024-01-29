@@ -5,6 +5,7 @@ page 50153 "loanlinelist"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = loanline;
+    AutoSplitKey = true;
 
     layout
     {
@@ -29,6 +30,8 @@ page 50153 "loanlinelist"
                 {
                     ApplicationArea = All;
                 }
+
+
 
             }
         }

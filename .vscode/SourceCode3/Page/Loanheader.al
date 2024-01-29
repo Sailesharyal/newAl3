@@ -50,6 +50,10 @@ page 50151 "Loan Header PAGE"
                 {
                     ApplicationArea = All;
                 }
+                field("Total Paid Amout"; Rec."Total Paid Amout")
+                {
+                    ApplicationArea = All;
+                }
 
 
 

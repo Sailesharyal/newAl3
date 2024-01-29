@@ -20,14 +20,40 @@ table 50153 "loanline"
         field(3; "Date"; Date)
         {
             Caption = 'Date';
-            DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            var
+                err: Record "Loan Header";
+            begin
+                err.Get();
+                if (rec.Date < err."Loan start Date") and (Rec.date > err."Loan End Date") then
+                    Error('Add a date after you atart your loan')
+
+                // Else
+                //     if (Rec.date > err."Loan End Date") then
+                //         Error('Add a date after you atart your loan')
+                //     else
+                //         Message('You have added a New date');
+
+
+
+            end;
+
+
+
+
+
         }
 
-        field(4; "Paid Amout"; Integer)
+        field(4; "Paid Amout"; Decimal)
         {
             Caption = 'Paid Amout';
             DataClassification = ToBeClassified;
+
         }
+
+
+
 
 
 
@@ -42,6 +68,8 @@ table 50153 "loanline"
             Clustered = true;
         }
     }
+
+
 
 
 

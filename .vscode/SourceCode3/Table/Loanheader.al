@@ -84,6 +84,13 @@ table 50151 "Loan Header"
 
         }
 
+        field(9; "Total Paid Amout"; Decimal)
+        {
+            Caption = 'Total Paid Amout';
+            FieldClass = FlowField;
+            CalcFormula = sum(loanline."Paid Amout" where("loan_Id" = field("Loan Id")));
+        }
+
 
 
 
@@ -111,6 +118,14 @@ table 50151 "Loan Header"
 
 
     end;
+
+
+
+
+
+
+
+
 
 
 }
