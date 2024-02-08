@@ -29,11 +29,11 @@ table 50153 "loanline"
                 if (rec.Date < err."Loan start Date") and (Rec.date > err."Loan End Date") then
                     Error('Add a date after you atart your loan')
 
-                // Else
-                //     if (Rec.date > err."Loan End Date") then
-                //         Error('Add a date after you atart your loan')
-                //     else
-                //         Message('You have added a New date');
+                Else
+                    if (Rec.date > err."Loan End Date") then
+                        Error('Add a date after you atart your loan')
+                    else
+                        Message('You have added a New date');
 
 
 
