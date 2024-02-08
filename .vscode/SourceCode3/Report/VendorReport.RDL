@@ -303,10 +303,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.07687in</Top>
-            <Left>0.32687in</Left>
+            <Top>0.04167in</Top>
+            <Left>0.13416in</Left>
             <Height>0.82292in</Height>
-            <Width>3.44792in</Width>
+            <Width>3.44791in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -314,11 +314,72 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2in</Height>
+        <Height>0.89583in</Height>
         <Style />
       </Body>
-      <Width>6.5in</Width>
+      <Width>3.5977in</Width>
       <Page>
+        <PageHeader>
+          <Height>1in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox4">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Vendor Report</Value>
+                      <Style>
+                        <FontFamily>SimSun-ExtB</FontFamily>
+                        <FontSize>16pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox4</rd:DefaultName>
+              <Top>0.31646in</Top>
+              <Left>1.18104in</Left>
+              <Height>0.35417in</Height>
+              <Width>2.05209in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Image Name="Image2">
+              <Source>Database</Source>
+              <Value>=First(Fields!Companypic.Value, "DataSet_Result")</Value>
+              <MIMEType>image/png</MIMEType>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.19667in</Top>
+              <Left>0.09771in</Left>
+              <Height>0.68229in</Height>
+              <Width>1.01389in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
         <Style />
       </Page>
     </ReportSection>
@@ -376,6 +437,9 @@ End Function
         </Field>
         <Field Name="Contact">
           <DataField>Contact</DataField>
+        </Field>
+        <Field Name="Companypic">
+          <DataField>Companypic</DataField>
         </Field>
       </Fields>
       <Query>

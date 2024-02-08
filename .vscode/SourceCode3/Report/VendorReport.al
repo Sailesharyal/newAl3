@@ -29,10 +29,27 @@ report 50111 VendorReport
             {
 
             }
+
+            column(Companypic; Companyinfo.Picture)
+            {
+
+            }
+
+            trigger OnAfterGetRecord()
+
+            begin
+
+                Companyinfo.get();
+                CompanyInfo.CalcFields(Picture);
+
+
+            end;
+
+
         }
     }
 
 
     var
-        myInt: Integer;
+        CompanyInfo: Record "Company Information";
 }
