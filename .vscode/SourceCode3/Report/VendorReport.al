@@ -35,6 +35,11 @@ report 50111 VendorReport
 
             }
 
+            column(No_; "No.")
+            {
+
+            }
+
             trigger OnAfterGetRecord()
 
             begin
