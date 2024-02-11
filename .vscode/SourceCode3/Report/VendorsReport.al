@@ -1,19 +1,25 @@
-report 50120 VendorsReport2
+report 50145 VendorsReport2
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = '.vscode/SourceCode3/Report/VendorsReport.RDL';
+    RDLCLayout = 'vscode/SourceCode3/Report/VendorsReport.RDL';
 
 
     dataset
     {
-        dataitem(DataItemName; SourceTableName)
+        dataitem(Vendor; Vendor)
         {
-            column(ColumnName; SourceFieldName)
+            column(City; City)
             {
 
             }
+            column(Contact; Contact)
+            {
+
+            }
+
+
         }
     }
 
