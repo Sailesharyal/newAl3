@@ -7,7 +7,7 @@ report 50120 "Sales Detail Report"
 
     dataset
     {
-        dataitem("Sales Header"; "Sales Line")
+        dataitem("Sales Header"; "Sales Header")
         {
             column(Customer_Disc__Group; "Customer Disc. Group")
             {
@@ -18,6 +18,22 @@ report 50120 "Sales Detail Report"
             {
 
             }
+
+            trigger OnAfterGetRecord()
+            begin
+
+            end;
+
+            trigger OnPostDataItem()
+            begin
+
+            end;
+
+            trigger OnPreDataItem()
+            begin
+
+            end;
+
         }
     }
 
